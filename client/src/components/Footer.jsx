@@ -67,7 +67,7 @@ const Footer = () => {
           </ul>
         </div>
 
-                <div>
+        <div>
           <h2 className="text-base font-medium text-gray-800">Contact</h2>
           <ul className="mt-3 flex flex-col gap-1.5">
             <li>
@@ -84,8 +84,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-
       </div>
       <hr className="border-gray-300 mt-8" />
       <div className="flex flex-col md:flex-row gap-2 items-center justify-between py-5">
@@ -95,14 +93,17 @@ const Footer = () => {
         </p>
         <ul className="flex items-center gap-4">
           <li>
-            <a href="#">Privacy</a> 
-          </li><li> | </li>
+            <a href="#">Privacy</a>
+          </li>
+          <li> | </li>
           <li>
             <a href="#">Terms</a>
-          </li> <li> | </li>
+          </li>{' '}
+          <li> | </li>
           <li>
             <a href="#">Cookies</a>
-          </li> <li> | </li>
+          </li>{' '}
+          <li> | </li>
         </ul>
       </div>
     </div>
