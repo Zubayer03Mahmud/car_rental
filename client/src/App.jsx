@@ -6,11 +6,12 @@ import CarDetails from './pages/CarDetails';
 import Cars from './pages/Cars';
 import MyBookings from './pages/MyBookings';
 import Footer from './components/Footer';
-import Layout from './pages/Owner/Layout';
-import Dashboard from './pages/Owner/DAshboard';
-import AddCar from './pages/Owner/AddCar';
-import ManageCars from './pages/Owner/ManageCars';
-import ManageBookings from './pages/Owner/ManageBookings';
+import Layout from './pages/owner/Layout';
+import AddCar from './pages/owner/AddCar';
+import ManageCars from './pages/owner/ManageCars';
+import ManageBookings from './pages/owner/ManageBookings';
+import Dashboard from './pages/owner/Dashboard';
+
 
 
 
@@ -32,7 +33,7 @@ const App = () => {
         <Route path="/my-bookings" element={<MyBookings />} />
 
         <Route path='/owner' element={ <Layout /> }> 
-          <Route index element={ <Dashboard />} />
+          <Route index element={ <Dashboard /> } />
           <Route path='add-car' element={ <AddCar />} />
           <Route path='manage-cars' element={ <ManageCars />} />
           <Route path='manage-booking' element={<ManageBookings />} />    
