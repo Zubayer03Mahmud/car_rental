@@ -227,19 +227,7 @@ export const dummyMyBookingsData = [
     }
 ]
 
-// export const dummyDashboardData = {
-//     "totalCars": 4,
-//     "totalBookings": 2,
-//     "pendingBookings": 0,
-//     "completedBookings": 2,
-//     "recentBookings": [
-//         dummyMyBookingsData[0],
-//         dummyMyBookingsData[1]
-//     ],
-//     "monthlyRevenue": 840
-// }
-
-export const dummyUserboardData = {
+export const dummyDashboardData = {
     "totalCars": 4,
     "totalBookings": 2,
     "pendingBookings": 0,
@@ -250,3 +238,15 @@ export const dummyUserboardData = {
     ],
     "monthlyRevenue": 840
 }
+
+// export const dummyUserboardData = {
+//     "totalCars": 4,
+//     "totalBookings": 2,
+//     "pendingBookings": 0,
+//     "completedBookings": 2,
+//     "recentBookings": [
+//         dummyMyBookingsData[0],
+//         dummyMyBookingsData[1]
+//     ],
+//     "monthlyRevenue": 840
+//}

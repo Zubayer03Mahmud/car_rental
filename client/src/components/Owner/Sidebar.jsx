@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   const updateImage = async() => {
     user.image= URL.createObjectURL(image)
-    setImage("")
+    setImage('')
   }
 
   return (
