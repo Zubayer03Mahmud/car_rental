@@ -1,11 +1,12 @@
-import express from "express";
-import "dotenv/config";
-import cors from "cors";
-import connectDB from "./configs/db.js";
+import express from 'express';
+import 'dotenv/config';
+import cors from 'cors';
+import connectDB from './configs/db.js';
+import userRouter from './routes/userRoutes.js';
 
 //initialize express app
 
-const app = express()
+const app = express();
 
 //connect database
 await connectDB();
@@ -15,7 +16,8 @@ await connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => res.send("Server is running..."));
+app.get('/', (req, res) => res.send('Server is running...'));
+app.use('/api/user', userRouter);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, ()=> console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
