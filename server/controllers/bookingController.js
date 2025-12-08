@@ -1,5 +1,5 @@
-import Booking from "../models/Booking";
-import Car from "../models/Car";
+import Booking from "../models/Booking.js";
+import Car from "../models/Car.js";
 
 //Function to Check Aailability of Car for a given Date
 
@@ -11,7 +11,7 @@ const checkAvailability = async (car, pickupDate, returnDate) => {
     returnDate: {$gte: pickupDate},
 
   })
-  return bookings.length === 0;
+  return booking.length === 0;
 
 }
 
