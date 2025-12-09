@@ -3,6 +3,8 @@ import Booking from '../models/Booking.js';
 import Car from '../models/Car.js';
 import User from '../models/User.js';
 import fs from 'fs';
+import mongoose from 'mongoose';
+
 
 //API to change Role of User
 export const changeRoleToOwner = async (req, res) => {
@@ -69,9 +71,10 @@ export const getOwnerCars = async (req, res) => {
 
 export const toggleCarAvailability = async (req, res) => {
   try {
+    
     const { _id } = req.user;
     const { carId } = req.body;
-    const car = await Car.findById({ carId });
+    const car = await Car.findById(String(carId));
     //checking is car belongs to the user
     if (car.owner.toString() != _id.toString()) {
       return res.json({ success: false, message: 'Unauthorized' });
@@ -91,7 +94,7 @@ export const deleteCar = async (req, res) => {
   try {
     const { _id } = req.user;
     const { carId } = req.body;
-    const car = await Car.findById({ carId });
+    const car = await Car.findById(String(carId));
     //checking is car belongs to the user
     if (car.owner.toString() != _id.toString()) {
       return res.json({ success: false, message: 'Unauthorized' });
