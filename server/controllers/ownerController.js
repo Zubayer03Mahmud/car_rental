@@ -132,7 +132,7 @@ export const getDashboardData = async (req, res) => {
 
     //calculate monthlyRevenue from booking where status is confirmed
     const monthlyRevenue = bookings
-      .slicce()
+      .slice()
       .filter((booking) => booking.status === 'confirmed')
       .reduce((acc, booking) => acc + booking.price, 0);
 
