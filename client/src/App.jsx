@@ -10,7 +10,7 @@ import Layout from './pages/owner/Layout';
 import AddCar from './pages/owner/AddCar';
 import ManageCars from './pages/owner/ManageCars';
 import Dashboard from './pages/owner/Dashboard';
-import ManageBookings from './pages/Owner/ManageBookings';
+import ManageBookings from './pages/owner/ManageBookings';
 import Login from './components/Login';
 import { Toaster } from 'react-hot-toast';
 import { useAppContext } from './context/AppContext';
