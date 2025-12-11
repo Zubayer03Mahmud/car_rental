@@ -96,7 +96,6 @@ export const getOwnerBookings = async (req, res) => {
 
 //API to change booking status
 
-//API to List User Booking
 export const changeBookingStatus = async (req, res) => {
   try{
     const {_id} = req.user;

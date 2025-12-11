@@ -62,7 +62,7 @@ const ManageBookings = () => {
 
            <tbody>
             {
-            bookings.map((booking, index) => (
+            bookings?.map((booking, index) => (
               <tr
                 key={index}
                 className="border-t border-borderColor text-gray-500"
