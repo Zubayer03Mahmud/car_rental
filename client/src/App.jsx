@@ -6,7 +6,7 @@ import CarDetails from './pages/CarDetails';
 import Cars from './pages/Cars';
 import MyBookings from './pages/MyBookings';
 import Footer from './components/Footer';
-import Layout from './pages/owner/Layout';
+import Layout from './pages/owner/Layout.jsx';
 import AddCar from './pages/owner/AddCar';
 import ManageCars from './pages/owner/ManageCars';
 import Dashboard from './pages/owner/Dashboard';
