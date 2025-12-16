@@ -1,16 +1,14 @@
 
-import { useEffect, useState } from 'react';
-import { } from '../../assets/assets';
+import React, { useEffect, useState } from 'react';
 import Title from '../../components/owner/Title';
 import { useAppContext } from '../../context/AppContext'
 import toast from 'react-hot-toast';
 
 
 const ManageBookings = () => {
-  
-  const {currency, axios} = useAppContext();
 
   const [bookings, setBookings] = useState([]);
+  const {currency, axios} = useAppContext();
 
   const fetchOwnerBookings = async () => {
     try{
@@ -40,6 +38,8 @@ const ManageBookings = () => {
     fetchOwnerBookings(); 
   } , []);
 
+
+
   return (
     <div className="px-4 pt-10 md:px-10 w-full">
       <Title
@@ -62,6 +62,7 @@ const ManageBookings = () => {
 
            <tbody>
             {
+              
             bookings?.map((booking, index) => (
               <tr
                 key={index}
@@ -95,7 +96,7 @@ const ManageBookings = () => {
                       <option value="confirmed">Confirmed</option>
 
                     </select>
-                  ): (
+                  ) : (
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${booking.status === 'confirmed' ? 'bg-green-100 text-green-500' : 'bg-red-100 text-red-500'} `} >{booking.status} </span>
                   ) }
                 </td>

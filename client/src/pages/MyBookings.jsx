@@ -26,7 +26,6 @@ const MyBookings = () => {
   }
 
   useEffect(() => {
-    user && fetchMyBookings();
   }, [user]);
 
   return (
